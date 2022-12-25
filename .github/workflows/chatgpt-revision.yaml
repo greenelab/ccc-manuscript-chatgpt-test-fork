@@ -20,7 +20,7 @@ jobs:
         run: bash ci/install-manuscript-editor.sh
       - name: Revise manuscript
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
         run: python ci/run-manuscript-editor.py
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
